@@ -1,0 +1,7 @@
+避免重定向
+Strict-Transport-Security:max-age = 111111111
+避免请求的过程中 访问https 站点先访问http站点 然后在用https去访问
+预加载  dns解析需要一定的时间 在浏览器级别，浏浏览器会从缓存中获取以减少延迟 
+web提供了一种dns预解析技术 让浏览器先解析一下域名 后续的同域名请求 就可以直接从dns缓存中获取了
+<link rel="dns-prefetch" href="//host">
+web标准还提供了 prefecth prerender的预加载技术 prefecth会在浏览器空闲的时间发起请求而prerender则会在浏览器的后台渲染页面 后续就会出现秒开的效果
