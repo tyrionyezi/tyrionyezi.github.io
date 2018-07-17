@@ -1,0 +1,23 @@
+js原型的一些理解
+
+在js中每个对象都有一个原型即 proto 而prototype只在函数对象中存在
+function a(){};
+var a1 = new a()
+console.log(a1)
+console.log(a)
+console.log(a.prototype)
+console.log(a1.__proto__)
+console.log(a.prototype === a1.__proto__) // true
+console.log(a.prototype.__proto__)
+console.log(a1.__proto__.__proto__)
+console.log(a1.__proto__.__proto__ === a.prototype.__proto__) // true
+console.log(a.constructor)
+console.log(a1.constructor)
+console.log(a.constructor.__proto__)
+console.log(a1.constructor.__proto__)
+console.log(a1.constructor.__proto__ === a.constructor.__proto__) //true
+console.log(a.constructor.prototype)
+console.log(a1.constructor.prototype)
+console.log(a.constructor.prototype.__proto__)
+console.log(a1.constructor.prototype.__proto__)
+console.log(a1.constructor.prototype.__proto__ === a.constructor.prototype.__proto__) //true
