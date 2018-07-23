@@ -16,7 +16,7 @@
 6. componentWillReceiveProps(nextProps)
 > 组件初始化时不掉用，组件接受新的props时调用
 7. shouldComponentUpdate(nextProps, next.state)
-react 性能优化非常重要的一环 组件接受新的state或者props时调用 我们可以设置在此对比前后两个props和state是否相同，如果相同则返回false 阻止更新
+> react 性能优化非常重要的一环 组件接受新的state或者props时调用 我们可以设置在此对比前后两个props和state是否相同，如果相同则返回false 阻止更新
 8. componentWillUpdate(nextProps,nextState)
 组件初始化时不调用，只有在组件将要更新时才调用 此时可以修改state
 9. render()
